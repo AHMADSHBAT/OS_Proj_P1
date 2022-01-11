@@ -175,24 +175,7 @@ void shell_loop()
 			printf("AHMAD$>");			// printing the init prompt to show for the user that the shell is ready to take commands.
 			fflush(stdin);
 			scanf("%[^\n]%*c",command);		// scan from the user input string includeing the spaces ( "%[^\n]  means that the spcaes are not excluded")
-			// while(1)
-			// {
-			// 	if(q + 1 >= MAX_BUFF_SIZE)
-			// 	{
-			// 		printf("your command reached the max size: 1024 characters \n");
-			// 	}
-			// 	ch = getchar();
-			// 	if(ch == '\n')
-			// 	{
-			// 		command[q] = '\0';
-			// 		q = 0;
-			// 		fflush(stdin);
-			// 		break;
-			// 	}
-			// 	command[q] = ch;
-			// 	q++;
-			// }
-			// PRINTLINE;
+			// PRINTLINE;		//a try to implement history mechanism
 			const int commandLength = strlen(command);			// length of the inputed command.
 			int pipesCount = 0;					
 			for(int i = 0;i < commandLength;i++){						// loop to count the number of pipes '|'.
